@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<form action="index.html.twig" method="post" id="quiz">
+<h1>Question 1 :<h1>
+<h3>{{ questions.question }}<h3>
+{% for reponse in reponses %}
+
+
+ <div>
+ 
+        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+        <label for="question-1-answers-C"<h3>{{ reponse.reponse }}<h3></label>
+    </div>
+
+ {% endfor %}
+  <a href="{{ path('question', {'id': questions.id}) }}" ><input class="btn btn-dark stretched-link"type="submit" value="Question suivante" /></a>
+</form>
+{% endblock %}
+
+
